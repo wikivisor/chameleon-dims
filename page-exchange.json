@@ -12,47 +12,47 @@
             {
                "name":"Chameleon-load.js",
                "namespace":"NS_MEDIAWIKI",
-               "url":"https:\/\/raw.githubusercontent.com\/wikivisor\/chameleon-wikivisor-conf\/master\/MediaWiki%2FChameleon-load.js.mediawiki"
+               "url":"https:\/\/raw.githubusercontent.com\/wikivisor\/chameleon-dims\/master\/MediaWiki%2FChameleon-load.js.mediawiki"
             },
             {
                "name":"Back-to-top.css",
                "namespace":"NS_MEDIAWIKI",
-               "url":"https:\/\/raw.githubusercontent.com\/wikivisor\/chameleon-wikivisor-conf\/master\/MediaWiki%2FBack-to-top.css.mediawiki"
+               "url":"https:\/\/raw.githubusercontent.com\/wikivisor\/chameleon-dims\/master\/MediaWiki%2FBack-to-top.css.mediawiki"
             },
             {
                "name":"Back-to-top.js",
                "namespace":"NS_MEDIAWIKI",
-               "url":"https:\/\/raw.githubusercontent.com\/wikivisor\/chameleon-wikivisor-conf\/master\/MediaWiki%2FBack-to-top.js.mediawiki"
+               "url":"https:\/\/raw.githubusercontent.com\/wikivisor\/chameleon-dims\/master\/MediaWiki%2FBack-to-top.js.mediawiki"
             },
             {
                "name":"Login-menu",
                "namespace":"NS_MEDIAWIKI",
-               "url":"https:\/\/raw.githubusercontent.com\/wikivisor\/chameleon-wikivisor-conf\/master\/MediaWiki%2FLogin-menu.mediawiki"
+               "url":"https:\/\/raw.githubusercontent.com\/wikivisor\/chameleon-dims\/master\/MediaWiki%2FLogin-menu.mediawiki"
             },
             {
                "name":"Mainpage",
                "namespace":"NS_MEDIAWIKI",
-               "url":"https:\/\/raw.githubusercontent.com\/wikivisor\/chameleon-wikivisor-conf\/master\/MediaWiki%2FMainpage.mediawiki"
+               "url":"https:\/\/raw.githubusercontent.com\/wikivisor\/chameleon-dims\/master\/MediaWiki%2FMainpage.mediawiki"
             },
             {
                "name":"Secondary-menu",
                "namespace":"NS_MEDIAWIKI",
-               "url":"https:\/\/raw.githubusercontent.com\/wikivisor\/chameleon-wikivisor-conf\/master\/MediaWiki%2FSecondary-menu.mediawiki"
+               "url":"https:\/\/raw.githubusercontent.com\/wikivisor\/chameleon-dims\/master\/MediaWiki%2FSecondary-menu.mediawiki"
             },
             {
                "name":"Social-menu",
                "namespace":"NS_MEDIAWIKI",
-               "url":"https:\/\/raw.githubusercontent.com\/wikivisor\/chameleon-wikivisor-conf\/master\/MediaWiki%2FSocial-menu.mediawiki"
+               "url":"https:\/\/raw.githubusercontent.com\/wikivisor\/chameleon-dims\/master\/MediaWiki%2FSocial-menu.mediawiki"
             },
             {
                "name":"User-menu",
                "namespace":"NS_MEDIAWIKI",
-               "url":"https:\/\/raw.githubusercontent.com\/wikivisor\/chameleon-wikivisor-conf\/master\/MediaWiki%2FUser-menu.mediawiki"
+               "url":"https:\/\/raw.githubusercontent.com\/wikivisor\/chameleon-dims\/master\/MediaWiki%2FUser-menu.mediawiki"
             },
             {
                "name":"Contact-menu",
                "namespace":"NS_MEDIAWIKI",
-               "url":"https:\/\/raw.githubusercontent.com\/wikivisor\/chameleon-wikivisor-conf\/master\/MediaWiki%2FContact-menu.mediawiki"
+               "url":"https:\/\/raw.githubusercontent.com\/wikivisor\/chameleon-dims\/master\/MediaWiki%2FContact-menu.mediawiki"
             }
          ],
          "requiredExtensions":[
