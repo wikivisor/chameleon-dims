@@ -1,0 +1,450 @@
+
+
+$min-height: 50px;
+
+/* color */
+
+$bg-light: #f9f9f9;
+
+$dims-blue: #445D7B;
+$midnight-blue: rgb(28, 44, 72);
+$sea-green: rgb(89, 171, 175);
+$sea-green-transparent: rgba(89, 171, 175, .2);
+$sea-green-transparent-5: rgba(89, 171, 175, .05);
+$react-purple: #8C62BB;
+$nform-blue: #26DCF9;
+$sure-pink: #F76BAA;
+
+.text-dims-blue {
+	color: $dims-blue !important;
+}
+.text-sea-green {
+	color: $sea-green !important;
+}
+.text-react-purple {
+	color: $react-purple !important;
+}
+.text-nform-blue {
+	color: $nform-blue !important;
+}
+.text-sure-pink {
+	color: $sure-pink !important;
+}
+.text-midnight-blue {
+	color: $midnight-blue !important;
+}
+
+.bg-dims-blue {
+	background-color: $dims-blue !important;
+}
+.bg-react-purple {
+	background-color: $react-purple !important;
+}
+.bg-sea-green {
+	background-color: $sea-green !important;
+}
+.bg-nform-blue {
+	background-color: $nform-blue !important;
+}
+.bg-sure-pink {
+	background-color: $sure-pink !important;
+}
+.bg-midnight-blue {
+	background-color: $midnight-blue !important;
+}
+
+.bg-sea-green, .bg-react-purple, .bg-nform-blue, .bg-sure-pink, .bg-midnight-blue, .bg-dims-blue {
+	@extend .text-white;
+	a {
+		color: #f6fbfb !important;
+		&:hover {
+			@extend .text-white;
+		}
+	}
+}
+.bar {
+	height: 6px;
+	max-width: 65px;
+	border-left: 16px solid #fff;
+}
+
+/* headings-font-family */
+
+@font-face {
+	font-family: 'Chalet';
+	src: url('/w/extensions/wikivisor/fonts/Chalet-NewYorkNineteenSeventy.eot');
+	src: url('/w/extensions/wikivisor/fonts/Chalet-NewYorkNineteenSeventy.eot?#iefix') format('embedded-opentype'), url('/w/extensions/wikivisor/fonts/Chalet-NewYorkNineteenSeventy.woff2') format('woff2'), url('/w/extensions/wikivisor/fonts/Chalet-NewYorkNineteenSeventy.woff') format('woff'), url('/w/extensions/wikivisor/fonts/Chalet-NewYorkNineteenSeventy.ttf') format('truetype'), url('/w/extensions/wikivisor/fonts/Chalet-NewYorkNineteenSeventy.svg#Chalet-NewYorkNineteenSeventy') format('svg');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'ChaletBook';
+	src: url('/w/extensions/wikivisor/fonts/ChaletBook.woff2') format('woff2'), url('/w/extensions/wikivisor/fonts/ChaletBook.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+
+/* font-rendering */
+
+html {
+	font-size: 100%;
+	-webkit-text-size-adjust: 100%;
+	font-variant-ligatures: common-ligatures;
+	-webkit-font-variant-ligatures: common-ligatures;
+	text-rendering: optimizeLegibility;
+	-moz-osx-font-smoothing: grayscale;
+	font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+	text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+	-webkit-text-stroke: 0.4px rgba(0, 0, 0, 0.04);
+}
+
+
+/* jumbotron */
+
+.jumbotron {
+	p {
+		font-family: ChaletBook;
+		font-size: 1.3rem;
+	}
+	.h1 {
+		font-family: Chalet;
+		font-size: 2.8rem;
+	}
+}
+
+
+/* headings positioning */
+
+h3,
+.h3,
+h4,
+.h4 {
+	@extend .mt-3;
+}
+
+h2+h3,
+h3+h4 {
+	@extend .mt-0;
+	@extend .pt-1;
+}
+
+
+/* link color reset */
+
+a {
+	@extend .text-primary;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	overflow-x: hidden;
+}
+.p-navbar {
+	height: $min-height;
+	min-height: $min-height;
+	@extend .border-light;
+	@extend .border-bottom;
+	@extend .bg-white;
+}
+.social-panel {
+	.p-navbar {
+		@extend .w-100;
+		.navbar-nav {
+			@extend .w-100;
+			@extend .justify-content-between;
+		}
+	}
+}
+.topbar {
+	@extend .position-sticky;
+	@extend .w-100;
+	top: 0;
+	order: 0;
+	z-index: 2;
+	.p-navbar {
+		.navbar-nav {
+			height: $min-height;
+			@extend .align-items-center;
+			&>.nav-item {
+				@extend .d-flex;
+				@extend .align-items-center;
+				height: calc(100% - 1px);
+				&>.nav-link {
+					@extend .text-dark;
+				}
+			}
+		}
+		.navbar-tools,
+		.navbar-tool {
+			@extend .d-flex;
+			@extend .align-items-center;
+			@extend .h-100;
+		}
+		.navbar-tools {
+			@extend .ml-3;
+		}
+		.navbar-tool {
+			@extend .position-absolute;
+			/* @extend .bg-light; */
+			background: $sea-green-transparent-5 !important;
+			@extend .justify-content-center;
+			width: $min-height;
+			@extend .border-left;
+			@extend .border-light;
+			right: 0;
+			&>a {
+			&:before {
+				@extend .m-0;
+					color: $sea-green !important;
+					content: "\f0c9";
+				}
+			}
+		}
+		.p-search {
+			@extend .w-100;
+			* {
+				@extend .border-0;
+				@extend .shadow-none;
+			}
+			.mw-searchButton {
+				background-image: none;
+				background-color: transparent !important;
+				margin-left: -40px;
+				z-index: 10;
+				&:before {
+					@extend .text-dark;
+				}
+			}
+			#searchInput {
+				@extend .rounded;
+				&:active,
+				&:focus {
+					background-color: #f0f0f0;
+				}
+			}
+		}
+		&>.navbar-nav {
+			@extend .d-flex;
+			@extend .justify-content-between;
+			@extend .w-100;
+		}
+	}
+}
+
+/* we don't want it to overlap VE edit panel */
+.ve-activated {
+	.topbar {
+		z-index: 1;
+	}
+}
+
+.father {
+	display: flex;
+	box-sizing: border-box;
+	width: 100%;
+	/*        position: absolute;
+				top: $min-height; */
+	order: 1;
+	background: $sea-green-transparent-5;
+}
+
+.leftChild {
+	@extend .bg-white;
+	width: 25%;
+	resize: horizontal;
+	box-sizing: border-box;
+}
+
+.rightChild {
+	@extend .bg-white;
+	width: calc(100%);
+	box-sizing: border-box;
+	z-index: 1;
+}
+
+#line {
+	width: 5px;
+	@extend .border-light;
+	@extend .border-right;
+	cursor: e-resize;
+}
+
+.handle {
+	width: 30px;
+	height: 30px;
+	margin-left: -10px;
+	margin-top: 12px;
+	border: 6px solid #fff !important;
+	outline: 1px solid #dee2e6;
+}
+
+.contentHeader {
+	@extend .my-3;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
+	@extend .border-0;
+	color: $midnight-blue !important;
+}
+
+h2,
+.h2 {
+	font-size: 2.2rem !important;
+}
+
+#firstHeading {
+	display: none;
+}
+
+.firstHeading-wrapper {
+	#firstHeading {
+		display: inherit;
+	}
+	h1 {
+		@extend .font-weight-bold;
+		@extend .mt-2;
+		@extend .mb-4;
+		font-size: 1.1rem;
+	}
+}
+
+.ve-init-target-visual {
+	&>.ve-ui-toolbar,
+	.ve-ui-toolbar-floating {
+		position: fixed;
+		top: 0;
+		z-index: 3;
+		left: 0;
+		right: 0;
+	}
+}
+
+.oo-ui-toolbar-position-top {
+	&>.oo-ui-toolbar-bar {
+		border-bottom: 1px solid #e9ecef;
+		box-shadow: none !important;
+		min-height: $min-height;
+	}
+}
+
+#toc {
+	display: none;
+}
+
+.leftChild {
+	z-index: 0;
+	overflow-x: hidden;
+}
+
+#p-contentnavigation {
+	height: $min-height;
+	@extend .align-items-center;
+}
+
+.social-panel {
+	height: $min-height;
+	.nav-item {
+		@extend .d-flex;
+		@extend .px-3;
+	}
+	.nav-link {
+		@extend .p-1;
+		@extend .d-flex;
+		@extend .justify-content-center;
+		@extend .align-items-center;
+		@extend .text-dark;
+		font-size: 14px;
+	}
+}
+
+.rightChild-panel {
+	#toc {
+		display: block;
+		@extend .border-0;
+		background: none;
+		position: fixed;
+		.toctitle {
+			@extend .d-none;
+		}
+		ul {
+			li {
+				@extend .m-0;
+				@extend .pl-1;
+				a {
+					@extend .ml-1;
+					@extend .rounded;
+				}
+			}
+			ul {
+				@extend .m-0;
+				li {
+					@extend .pl-1;
+					a {
+						@extend .ml-1;
+						@extend .rounded;
+					}
+				}
+			}
+			a {
+				font-size: 14px;
+			}
+		}
+		.nav-item {
+			&>a:hover {
+				background: #f0f0f0;
+			}
+		}
+		.nav-link {
+			@extend .py-0;
+			@extend .text-primary;
+			cursor: pointer;
+			&.active::before {
+				display: inline-block;
+				width: 5px;
+				background: #ccc;
+				content: '';
+				float: left;
+				height: 1rem;
+				margin-left: -1rem;
+				margin-top: 3px;
+			}
+		}
+	}
+}
+
+
+/*
+#siteSub {
+	@extend .text-muted;
+	display: inline-block !important;
+	float: right;
+	font-size: 14px !important;
+}
+*/
+
+.subpages {
+	margin-left: .25rem;
+	font-size: 14px !important;
+}
+
+/* gallery thumbs */
+li.gallerybox div.thumb {
+	border: 1px solid $sea-green;
+	background-color: #fff;
+}
