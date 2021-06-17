@@ -5,17 +5,55 @@ $min-height: 50px;
 /* color */
 
 $bg-light: #f9f9f9;
-$dims-blue: rgb(68, 93, 123);
+
+$dims-blue: #445D7B;
 $midnight-blue: rgb(28, 44, 72);
 $sea-green: rgb(89, 171, 175);
 $sea-green-transparent: rgba(89, 171, 175, .2);
 $sea-green-transparent-5: rgba(89, 171, 175, .05);
+$react-purple: #8C62BB;
+$nform-blue: #26DCF9;
+$sure-pink: #F76BAA;
+
+.text-dims-blue {
+	color: $dims-blue !important;
+}
 .text-sea-green {
 	color: $sea-green !important;
 }
+.text-react-purple {
+	color: $react-purple !important;
+}
+.text-nform-blue {
+	color: $nform-blue !important;
+}
+.text-sure-pink {
+	color: $sure-pink !important;
+}
+.text-midnight-blue {
+	color: $midnight-blue !important;
+}
 
+.bg-dims-blue {
+	background-color: $dims-blue !important;
+}
+.bg-react-purple {
+	background-color: $react-purple !important;
+}
 .bg-sea-green {
 	background-color: $sea-green !important;
+}
+.bg-nform-blue {
+	background-color: $nform-blue !important;
+}
+.bg-sure-pink {
+	background-color: $sure-pink !important;
+}
+.bg-midnight-blue {
+	background-color: $midnight-blue !important;
+}
+
+.bg-sea-green, .bg-react-purple, .bg-nform-blue, .bg-sure-pink, .bg-midnight-blue, .bg-dims-blue {
 	@extend .text-white;
 	a {
 		color: #f6fbfb !important;
@@ -24,12 +62,6 @@ $sea-green-transparent-5: rgba(89, 171, 175, .05);
 		}
 	}
 }
-
-.midnight-blue {
-	background: $midnight-blue !important;
-	@extend .text-white;
-}
-
 
 /* headings-font-family */
 
