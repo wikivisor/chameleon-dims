@@ -427,12 +427,15 @@ h2, .h2 {
 }
 
 /* gallery thumbs */
+
 li.gallerybox div.thumb {
 	border: 1px solid $sea-green;
 	background-color: #fff;
 }
 
 /* panelize bottom bar */
+
+.bottom-bar {
 	margin-left: 3rem;
 	margin-right: 3rem;
 	border-top-left-radius: 5px;
