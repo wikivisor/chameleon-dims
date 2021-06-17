@@ -87,7 +87,6 @@ $sure-pink: #F76BAA;
 	font-display: swap;
 }
 
-
 /* font-rendering */
 
 html {
@@ -103,7 +102,6 @@ html {
 	-webkit-text-stroke: 0.4px rgba(0, 0, 0, 0.04);
 }
 
-
 /* jumbotron */
 
 .jumbotron {
@@ -112,27 +110,21 @@ html {
 		font-size: 1.3rem;
 	}
 	.h1 {
-		font-family: Chalet;
+		font-family: ChaletBook;
 		font-size: 2.8rem;
 	}
 }
 
-
 /* headings positioning */
 
-h3,
-.h3,
-h4,
-.h4 {
+h3, .h3, h4, .h4 {
 	@extend .mt-3;
 }
 
-h2+h3,
-h3+h4 {
+h2+h3, h3+h4 {
 	@extend .mt-0;
 	@extend .pt-1;
 }
-
 
 /* link color reset */
 
@@ -291,20 +283,12 @@ body {
 	@extend .my-3;
 }
 
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4 {
+h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 	@extend .border-0;
 	color: $midnight-blue !important;
 }
 
-h2,
-.h2 {
+h2, .h2 {
 	font-size: 2.2rem !important;
 }
 
@@ -427,7 +411,6 @@ h2,
 		}
 	}
 }
-
 
 /*
 #siteSub {
