@@ -62,6 +62,11 @@ $sure-pink: #F76BAA;
 		}
 	}
 }
+.bar {
+	height: 6px;
+	max-width: 65px;
+	border-left: 16px solid #fff;
+}
 
 /* headings-font-family */
 
@@ -107,7 +112,7 @@ html {
 		font-size: 1.3rem;
 	}
 	.h1 {
-		font-family: ChaletBook;
+		font-family: Chalet;
 		font-size: 2.8rem;
 	}
 }
