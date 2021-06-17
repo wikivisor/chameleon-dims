@@ -1,0 +1,27 @@
+#!/bin/bash
+# Set variables
+MW_SERVER_NAME=chameleon.wikivisor.org
+MW_HOME=/var/www/$MW_SERVER_NAME/w
+SCRIPT=$MW_HOME/maintenance/generateSitemap.php
+MW_SITEMAP_PAUSE_DAYS=1
+
+# Convert to seconds (suffixed sleep command has issues on OSX)
+SLEEPDAYS=$(expr $MW_SITEMAP_PAUSE_DAYS \* 60 \* 60 \* 24)
+
+echo Starting sitemap generator...
+# Wait a few minutes after the server starts up to give other processes time to get started
+sleep 180
+echo Sitemap generator started.
+while true; do
+    php $SCRIPT \
+      --fspath=$MW_HOME/sitemap/ \
+      --urlpath=w/sitemap/ \
+      --compress yes \
+      --server=$MW_SERVER_NAME \
+      --skip-redirects \
+      --identifier=mediawiki
+
+    # Wait some seconds to let the CPU do other things, like handling web requests, etc
+    echo mwsitemapgen waits for "$SLEEPDAYS" seconds...
+    sleep "$SLEEPDAYS"
+done

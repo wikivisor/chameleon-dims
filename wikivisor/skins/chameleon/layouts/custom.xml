@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+<?xml-model href="https://ProfessionalWiki.github.io/chameleon/schema/1.0/layout.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+This file is part of the MediaWiki skin Chameleon.
+
+@copyright 2013 - 2019, Stephan Gambke
+@license   GNU General Public License, version 3 (or any later version)
+
+The Chameleon skin is free software: you can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by the Free
+Software Foundation, either version 3 of the License, or (at your option) any
+later version.
+
+The Chameleon skin is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+details.
+
+You should have received a copy of the GNU General Public License along
+with this program. If not, see <http://www.gnu.org/licenses/>.
+
+@author Stephan Gambke
+@since 1.1
+@ingroup Skins
+-->
+<structure xmlns="https://ProfessionalWiki.github.io/chameleon/schema/3.0/layout.rng">
+	<component type="Html"><![CDATA[
+	<div class="father flex-fill" id="app">
+		<div class="leftChild d-flex flex-column flex-fill" id="leftChild">
+	]]></component>
+	<component type="Container" class="firstHeading-wrapper px-3 position-fixed"/>
+	<component type="Html"><![CDATA[
+		</div>
+		<div id="line" class=""><div class="d-inline-block bg-sea-green rounded-circle position-fixed handle"></div>
+	]]></component>
+
+	<component type="Html"><![CDATA[
+		</div>
+		<div class="rightChild d-flex flex-column flex-fill w-100 p-0" id="rightChild">
+	]]></component>
+	<grid class="flex-fill d-flex flex-column" mode="fluid">
+		<row>
+				<cell class="container col-9">
+				<component type="PageTools" class="flex-row py-3 mx-3 rounded bg-white" hideSelectedNameSpace="yes">
+					<modification type="ShowOnlyFor" permission="edit" />
+				</component>
+			</cell>
+			<cell class="col-3 d-flex flex-row justify-content-end border-left p-0 social-panel border-bottom border-light">
+				<component type="NavbarHorizontal" collapsible="no" class="px-0">
+					<component type="Toolbox">
+						<modification type="ShowOnlyFor" permission="edit" />
+					</component>
+					<component type="Menu" message="contact-menu" class="py-3"/>
+				</component>
+
+				<!-- <component type="Menu" message="social-menu" class="py-3"/> -->
+			</cell>
+		</row>
+		<row class="flex-fill">
+			<cell class="container col-9 pb-5">
+  			<component type="MainContent"/>
+			</cell>
+			<cell class="col-3 border-left border-light rightChild-panel pt-3 px-0">
+
+			</cell>
+		</row>
+<!-- Footer -->
+		<row class="">
+			<cell class="d-flex flex-column flex-md-row p-1 align-items-center justify-content-center justify-content-md-between bg-sea-green">
+				<component type="Html"><![CDATA[
+					<span class="small d-inline-block pl-3">&copy; DIMS <script>document.write(new Date().getFullYear())</script></span>
+				]]></component>
+				<component type="FooterPlaces" class="justify-content-center justify-content-md-start"/>
+				<component type="FooterIcons" class="justify-content-center justify-content-md-end m-0 pr-0"/>
+			</cell>
+			<cell class="col-3 border-left border-light"></cell>
+		</row>
+	</grid>
+	<component type="Html"><![CDATA[
+		</div>
+  </div>
+	]]></component>
+<!-- Topbar -->
+	<component type="Container" class="topbar">
+		<component type="NavbarHorizontal" class="p-0" collapsible="no">
+			<component type="Logo" addLink="yes" class="ml-3"/>
+			<component type="Html"><![CDATA[
+				<div class="d-flex align-items-center font-weight-bold border-right border-light h-100 mr-2 pr-3 text-sea-green">Docs</div>
+			]]></component>
+			<component type="Menu" message="products-menu"/>
+			<component type="SearchBar" class="m-auto" buttons="search"/>
+			<component type="PersonalTools" hideNewtalkNotifier="yes"/>
+		</component>
+	</component>
+</structure>

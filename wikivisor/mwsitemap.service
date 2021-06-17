@@ -1,0 +1,13 @@
+[Unit]
+Description=MediaWiki Sitemap Generator
+
+[Service]
+ExecStart=/usr/local/bin/mwsitemap.generator
+Nice=10
+ProtectSystem=full
+User=www-data
+OOMScoreAdjust=200
+StandardOutput=journal
+
+[Install]
+WantedBy=multi-user.target

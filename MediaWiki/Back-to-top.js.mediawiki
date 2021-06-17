@@ -1,0 +1,24 @@
+(function($, mw) {
+
+	$('<div>')
+		.addClass('back-top')
+		.html('<i class="fas fa-chevron-up"></i>')
+		.appendTo('.bodyContent')
+		.bind({
+			click: function(e) {
+				e.preventDefault();
+				$('html, body').animate({
+					scrollTop: "0"
+				});
+			}
+		});
+
+	$(window).scroll(function() {
+		if ($(this).scrollTop()) {
+			$('.back-top').css('visibility', 'visible');
+		} else {
+			$('.back-top').css('visibility', 'hidden');
+		}
+	});
+
+})(jQuery, mw);

@@ -1,0 +1,33 @@
+/* CSS placed here will be applied to all skins */
+/**
+* Styles
+*/
+
+.back-top {
+	bottom: 4.5rem;
+	border-radius: 50%;
+	color: #fff;
+	height: 52px;
+	line-height: 40px;
+	position: fixed;
+	text-align: center;
+	transition: all .3s ease-in-out;
+	visibility: hidden;
+	width: 52px;
+	cursor: pointer;
+	pointer-events: initial !important;
+	z-index: 1060;
+	background-color: #80318b;
+	right: 0.66rem;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.2);
+	opacity: 1;
+	border: 6px solid #fff;
+}
+.back-top:hover {
+	pointer-events:initial;
+	opacity: 1;
+}
+.back-top:hover i {
+    transform: rotate(720deg);
+    transition: all .75s;
+}

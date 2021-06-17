@@ -1,0 +1,5 @@
+* {{CURRENTLOGGEDUSER}}
+** Special:Preferences|preferences
+** Special:Watchlist|watchlist
+** Special:Contributions/{{CURRENTLOGGEDUSER}}|mycontris
+** Special:Logout|logout

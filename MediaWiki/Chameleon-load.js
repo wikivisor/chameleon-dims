@@ -1,0 +1,129 @@
+/* Any JavaScript here will be loaded for all users on every page load. */
+
+$(function(){
+	adjustDivs();
+	moveFun();
+	$('body').attr('data-spy','scroll').attr('data-target','#toc').attr('data-offset',0).scrollspy({ target: '#toc' });
+});
+
+const mq = window.matchMedia("(max-width: 1105px)");
+
+/**
+ * Offset the target heading on the height of the fixed elements.
+ */
+! function(window) {
+	'use strict';
+
+	// Update this function so it returns the height of your fixed headers
+	function fixedHeaderOffset() {
+		if (mq.matches) {
+			return 75;
+		} else {
+			return 75;
+		}
+	}
+
+	// Run on first scroll (in case the user loaded a page with a hash in the url)
+	window.addEventListener('scroll', onScroll);
+
+	function onScroll() {
+		window.removeEventListener('scroll', onScroll);
+		scrollUpToCompensateForFixedHeader();
+	}
+
+	// Run on hash change (user clicked on anchor link)
+	if ('onhashchange' in window) {
+		window.addEventListener('hashchange', scrollUpToCompensateForFixedHeader);
+	}
+
+	function scrollUpToCompensateForFixedHeader() {
+		var hash,
+			target,
+			offset;
+
+		// Get hash, e.g. #mathematics
+		hash = window.location.hash;
+		if (hash.length < 2) {
+			return;
+		}
+
+		// Get :target, e.g. &lt;h2 id="mathematics"&gt;...&lt;/h2&gt;
+		target = document.getElementById(hash.slice(1));
+		if (target === null) {
+			return;
+		}
+
+		// Get distance of :target from top of viewport. If it's near zero, we assume
+		// that the user was just scrolled to the :target.
+		if (target.getBoundingClientRect().top < 2) {
+			window.scrollBy(0, -fixedHeaderOffset());
+		}
+	}
+
+}(window);
+
+function moveFun(){
+    var leftChild = document.getElementById('leftChild');
+    var oLine = document.getElementById('line');
+    var rightChild = document.getElementById('rightChild');
+    oLine.onmousedown = function(ev){
+        var iEvent = ev||event;
+        var dx = iEvent.clientX;//When you click for the first time, store the x-axis coordinates. //Relative to the browser window
+        var leftWidth = leftChild.offsetWidth;
+        var rightWidth = rightChild.offsetWidth;
+        document.onmousemove = function(ev){
+            var iEvent = ev||event;
+                var diff = iEvent.clientX-dx; //The distance moved (a negative number when sliding to the left, a positive number when sliding to the right)
+            if(100 < (leftWidth + diff)  &&  100 < (rightWidth - diff)){
+                         //The minimum width of both divs is 100px
+                leftChild.style.width = (leftWidth + diff) +'px';
+                rightChild.style.width = (rightWidth - diff) +'px';
+            }
+        };
+        document.onmouseup=function(){
+            document.onmousedown = null;
+            document.onmousemove = null;
+        };
+        return false;
+    }
+}
+
+// Debounce
+function debounce(func, time){
+    var time = time || 100; // 100 by default if no param
+    var timer;
+    return function(event){
+        if(timer) clearTimeout(timer);
+        timer = setTimeout(func, time, event);
+    };
+}
+
+// Adjust
+function adjustDivs(){
+	$('.rightChild').css({'width': '100%'});
+	$('.leftChild').css({'width': '25%'});
+    $('.father, .line, .leftChild').css({'height': '100%'});
+}
+
+// Function with stuff to execute
+function resizeContent() {
+    // Do loads of stuff once window has resized
+    adjustDivs();
+    moveFun();
+}
+
+window.scroll(function () {
+	adjustDivs();
+	moveFun();
+});
+
+// Eventlistener
+window.addEventListener('resize', debounce( resizeContent, 150 ));
+
+// Move first heading
+$('#firstHeading').detach().appendTo('.firstHeading-wrapper');
+
+// Move TOC
+$('#toc').detach().appendTo('.rightChild-panel');
+$('#toc li').addClass('nav-item');
+$('#toc li a').addClass('nav-link');

@@ -1,0 +1,3 @@
+* https://facebook.com  | | fab fa-facebook fa-2x
+* https://twitter.com   | | fab fa-twitter fa-2x
+* https://instagram.com | | fab fa-instagram fa-2x
