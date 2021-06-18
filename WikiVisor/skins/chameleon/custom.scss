@@ -478,9 +478,16 @@ table {
 		@extend .p-3;
 	}
 	td {
-		boder-color: transparent !important;
+		border-color: transparent !important;
 		border-bottom: 1px solid #c0ccdb !important;
 		@extend .px-3;
 		@extend .py-2;
+	}
+	tr {
+		&:last-of-type {
+			td {
+				border-bottom-width: 0 !important;
+			}
+		}
 	}
 }
