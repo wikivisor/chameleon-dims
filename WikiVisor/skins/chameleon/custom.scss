@@ -245,8 +245,6 @@ body {
 	display: flex;
 	box-sizing: border-box;
 	width: 100%;
-	/*        position: absolute;
-				top: $min-height; */
 	order: 1;
 	background: $sea-green-transparent-5;
 }
@@ -256,6 +254,8 @@ body {
 	width: 25%;
 	resize: horizontal;
 	box-sizing: border-box;
+	z-index: 0;
+	overflow-x: hidden;
 }
 
 .rightChild {
@@ -331,11 +331,6 @@ h2, .h2 {
 
 #toc {
 	display: none;
-}
-
-.leftChild {
-	z-index: 0;
-	overflow-x: hidden;
 }
 
 #p-contentnavigation {
@@ -442,4 +437,9 @@ li.gallerybox div.thumb {
 	margin-right: 3rem;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
+}
+
+#btnGroupAddon {
+	background-color: rgba(0,0,0,.1);
+	@extend .text-white;
 }
