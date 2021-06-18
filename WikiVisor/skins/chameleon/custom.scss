@@ -239,6 +239,8 @@ body {
 	}
 }
 
+/* grid */
+
 .father {
 	display: flex;
 	box-sizing: border-box;
@@ -343,11 +345,11 @@ h2, .h2 {
 
 .social-panel {
 	height: $min-height;
-	.nav-item {
+	&> .nav-item {
 		@extend .d-flex;
 		@extend .px-3;
 	}
-	.nav-link {
+	&> .nav-link {
 		@extend .p-1;
 		@extend .d-flex;
 		@extend .justify-content-center;
