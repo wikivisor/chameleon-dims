@@ -494,4 +494,11 @@ table {
 		caption-side: top;
 		font-size: 14px;
 	}
+	.jquery-tablesorter {
+		th {
+			&.headerSort {
+				background-blend-mode: overlay;
+			}
+		}
+	}
 }
