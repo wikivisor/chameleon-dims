@@ -52,8 +52,6 @@ with this program. If not, see <http://www.gnu.org/licenses/>.
 					</component>
 					<component type="Menu" message="contact-menu" class="py-3"/>
 				</component>
-
-				<!-- <component type="Menu" message="social-menu" class="py-3"/> -->
 			</cell>
 		</row>
 		<row class="flex-fill">
@@ -66,7 +64,7 @@ with this program. If not, see <http://www.gnu.org/licenses/>.
 		</row>
 <!-- Footer -->
 		<row class="">
-			<cell class="bottom-bar d-flex flex-column flex-md-row p-1 align-items-center justify-content-center justify-content-md-between bg-midnight-blue">
+			<cell class="bottom-bar d-flex flex-column flex-md-row p-1 align-items-center justify-content-center justify-content-md-between bg-dims-blue">
 				<component type="Html"><![CDATA[
 					<span class="small d-inline-block pl-3">&copy; DIMS <script>document.write(new Date().getFullYear())</script></span>
 				]]></component>
