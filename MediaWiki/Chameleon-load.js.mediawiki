@@ -127,3 +127,10 @@ $('#firstHeading').detach().appendTo('.firstHeading-wrapper');
 $('#toc').detach().appendTo('.rightChild-panel');
 $('#toc li').addClass('nav-item');
 $('#toc li a').addClass('nav-link');
+
+// Style contact menu
+const contactIcon = $("<i/>")
+	.addClass('fa fa-paper-plane text-nowrap');
+
+$('.p-tb-dropdown + .nav-item').prop('title','Contact us');
+$('.p-tb-dropdown + .nav-item a').text("cnt").html($(contactIcon));
