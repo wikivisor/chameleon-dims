@@ -469,14 +469,16 @@ li.gallerybox div.thumb {
 /* tables */
 
 table {
+	@extend .border-0;
 	@extend .mb-4;
 	th {
 		background: $sea-green !important;
+		@extend .border-0;
 		@extend .text-white;
 		@extend .p-3;
 	}
 	td {
-		@extend .border-0;
+		boder-color: transparent !important;
 		border-bottom: 1px solid #c0ccdb !important;
 		@extend .px-3;
 		@extend .py-2;
