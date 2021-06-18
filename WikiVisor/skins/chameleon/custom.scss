@@ -446,10 +446,22 @@ li.gallerybox div.thumb {
 	#btnGroupAddon {
 		background-color: rgba(0,0,0,.1) !important;
 		@extend .text-white;
+		@extend .text-decoration-none;
 	}
 	&:hover {
 		#btnGroupAddon {
 			background-color: rgba(0,0,0,.175) !important;
 		}
 	}
+}
+
+/* dropdown toggle caret */
+
+.dropdown-toggle::after {
+	@extend .ml-2;
+	@extend .border-0;
+	vertical-align: baseline;
+	content: "\f078";
+	font-weight: bold;
+	font-family: 'Font Awesome 5 Free';
 }
