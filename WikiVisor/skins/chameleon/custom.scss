@@ -460,8 +460,8 @@ li.gallerybox div.thumb {
 .dropdown-toggle::after {
 	@extend .ml-2;
 	@extend .border-0;
-	vertical-align: baseline;
-	content: "\f078";
+	vertical-align: baseline !important;
+	content: "\f078" !important;
 	font-weight: bold;
 	font-family: 'Font Awesome 5 Free';
 }
