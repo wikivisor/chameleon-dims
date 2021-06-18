@@ -345,17 +345,17 @@ h2, .h2 {
 
 .social-panel {
 	height: $min-height;
-	&> .nav-item {
+	.p-tb-dropdown, .p-tb-dropdown + .nav-item {
 		@extend .d-flex;
 		@extend .px-3;
-	}
-	&> .nav-link {
-		@extend .p-1;
-		@extend .d-flex;
-		@extend .justify-content-center;
-		@extend .align-items-center;
-		@extend .text-dark;
-		font-size: 14px;
+		&> .nav-link {
+			@extend .p-1;
+			@extend .d-flex;
+			@extend .justify-content-center;
+			@extend .align-items-center;
+			@extend .text-dark;
+			font-size: 14px;
+		}
 	}
 }
 
