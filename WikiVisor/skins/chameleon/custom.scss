@@ -471,12 +471,13 @@ li.gallerybox div.thumb {
 table {
 	@extend .mb-4;
 	th {
-		background: $sea-green;
+		background: $sea-green !important;
 		@extend .text-white;
 		@extend .p-3;
 	}
 	td {
-		border-bottom: 1px solid #c0ccdb;
+		@extend .border-0;
+		border-bottom: 1px solid #c0ccdb !important;
 		@extend .px-3;
 		@extend .py-2;
 	}
