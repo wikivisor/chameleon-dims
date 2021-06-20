@@ -53,6 +53,11 @@
                "name":"Contact-menu",
                "namespace":"NS_MEDIAWIKI",
                "url":"https:\/\/raw.githubusercontent.com\/wikivisor\/chameleon-dims\/master\/MediaWiki%2FContact-menu.mediawiki"
+            },
+            {
+               "name":"Products-menu",
+               "namespace":"NS_MEDIAWIKI",
+               "url":"https:\/\/raw.githubusercontent.com\/wikivisor\/chameleon-dims\/master\/MediaWiki%2FProducts-menu.mediawiki"
             }
          ],
          "requiredExtensions":[

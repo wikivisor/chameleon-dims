@@ -29,6 +29,14 @@ with this program. If not, see <http://www.gnu.org/licenses/>.
 		<div class="leftChild d-flex flex-column flex-fill" id="leftChild">
 	]]></component>
 	<component type="Container" class="firstHeading-wrapper px-3 position-fixed"/>
+	<component type="Container" class="anon-message">
+		<modification type="HideFor" permission="read" />
+		<component type="Html"><![CDATA[
+			<div id="anon-message"></div>
+			<script>
+			</script>
+		]]></component>
+	</component>
 	<component type="Html"><![CDATA[
 		</div>
 		<div id="line" class=""><div class="d-inline-block bg-sea-green rounded-circle position-fixed handle"></div>
@@ -47,18 +55,16 @@ with this program. If not, see <http://www.gnu.org/licenses/>.
 			</cell>
 			<cell class="col-3 d-flex flex-row justify-content-end border-left p-0 social-panel border-bottom border-light">
 				<component type="NavbarHorizontal" collapsible="no" class="px-0">
-					<component type="Toolbox">
-						<modification type="ShowOnlyFor" permission="edit" />
-					</component>
-					<component type="Menu" message="contact-menu" class="py-3"/>
+					<component type="Toolbox"/>
+					<component type="Menu" message="contact-menu"/>
 				</component>
 			</cell>
 		</row>
 		<row class="flex-fill">
-			<cell class="container col-9 pb-5">
+			<cell class="container col-9 pb-5 overflow-x-auto">
   			<component type="MainContent"/>
 			</cell>
-			<cell class="col-3 border-left border-light rightChild-panel pt-3 px-0">
+			<cell class="col-3 border-left border-light bg-white rightChild-panel pt-3 px-0">
 
 			</cell>
 		</row>
